@@ -8,10 +8,16 @@ def main():
         sys.stdout.write("$ ")
 
         # wait for user input
-        input_text = input()
-        if input_text == "exit":
+        command = input()
+
+        if command == "exit":
             break
-        print(f"{input_text}: command not found")
+
+        elif command.startswith("echo "):
+            print(command.split("echo ", 1)[1])
+
+        else:
+            print(f"{command}: command not found")
 
 
 if __name__ == "__main__":
