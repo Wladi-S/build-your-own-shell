@@ -2,7 +2,6 @@ import sys
 
 
 def main():
-    # TODO: Uncomment the code below to pass the first stage
 
     while True:
 
@@ -10,6 +9,8 @@ def main():
 
         # wait for user input
         input_text = input()
+        if input_text == "exit":
+            break
         print(f"{input_text}: command not found")
 
 
